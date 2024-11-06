@@ -16,16 +16,6 @@
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&vtrackball>;
-
-        snipe {
-            layers = <Button>;
-            input-processors = <&xy_scaler 1 3>;
-        };
-
-        scroll {
-            layers = <Nav>;
-            input-processors = <&xy_invert (INPUT_TRANSFORM_Y_INVERT)>, <&xy_scaler 1 3>, <&x_scaler 0 1>, <&mouse_to_wheel_mapper>;
-        };
     };
     macros {
         macro_email_q: macro_email_q {
